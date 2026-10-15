@@ -481,16 +481,3 @@
 #         "message":"DB Connected"
 #     }
 
-
-
-
-from fastapi import FastAPI,Request
-import time
-
-app = FastAPI()
-
-@app.middleware("http")
-async def my_middleware(request:Request, call_next):
-    print("Request Received")
-    
-    response = await call
